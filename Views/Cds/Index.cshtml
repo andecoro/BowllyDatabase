@@ -1,0 +1,72 @@
+﻿@model IEnumerable<BowllyForever.Models.Cd>
+
+@{
+    ViewData["Title"] = "Compact Disc Listings";
+}
+
+<style type="text/css">
+    h2 {
+        color: #069;
+    }
+</style>
+
+<h2>Compact Disc Listings</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Artist)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                   Company
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Label)
+                </th>
+                <th>
+                   Cat.No.
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Released)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordCo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatNo)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Released)
+            </td>
+            <td>
+               
+                <a asp-action="Details" asp-route-id="@item.Cdid">Details</a> 
+              
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

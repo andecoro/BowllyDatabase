@@ -1,0 +1,94 @@
+﻿@model BowllyForever.Models.Cd
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style type="text/css">
+    h2 {
+        color: #069;
+    }
+</style>
+
+<h2>Compact Disc Details</h2>
+
+<div>
+
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cdid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cdid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordCo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecordCo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Label)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CatNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CatNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Released)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Released)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Front)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Front)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Back)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Back)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inside)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inside)
+        </dd>
+
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Cdid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

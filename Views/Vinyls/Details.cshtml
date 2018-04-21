@@ -1,0 +1,100 @@
+﻿@model BowllyForever.Models.Vinyl 
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vinyl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+
+        </dt>
+        <dd>
+            <img src="https://bowllystore.blob.core.windows.net/vinyl/Front/@Html.DisplayFor(model => model.Front)" style='height: 50%; width: 50%; object-fit: contain'>
+
+        </dd>
+        <dt>
+
+        </dt>
+        <dd>
+            <p>&nbsp;</p>
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VinylId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VinylId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordCo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecordCo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Label)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CatNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CatNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+        <dt>
+            Link
+        </dt>
+        <dd>
+            <a href="https://www.bowllyonvinyl.co.uk/al-bowlly/@Html.DisplayFor(model => model.Bowllyonvinyl) ">@Html.DisplayFor(model => model.Bowllyonvinyl)<a/>
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VinylId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+   

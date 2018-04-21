@@ -1,0 +1,110 @@
+﻿@model BowllyForever.Models.Cassette
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cassette</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+
+        </dt>
+        <dd>
+            <table cellspacing="5">
+                <TR>
+                    <td>
+                        <img src="https://bowllystore.blob.core.windows.net/cassette/Front/@Html.DisplayFor(model => model.Front)" style='height: 500px; width: 300px; object-fit: contain'>
+                    </td>
+                    <td>
+                        <p>&nbsp;</p>
+                    </td>
+                             
+                    <td>
+                        <img src="https://bowllystore.blob.core.windows.net/cassette/Back/@Html.DisplayFor(model => model.Back)" style='height: 500px; width: 300px; object-fit: contain'>
+                    </td>
+                </TR>
+            </table>
+                  
+        <dt>
+
+        </dt>
+        <dd>
+            <p>&nbsp;</p>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CassetteId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CassetteId)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordCo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecordCo)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Label)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Label)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CatNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CatNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Front)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Front)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Back)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Back)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CassetteId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

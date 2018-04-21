@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BowllyForever.Models.Vinyl>
+
+@{
+    ViewData["Title"] = "Vinyl Listings";
+}
+
+
+<style type="text/css">
+    h2 {
+        color: #069;
+    }
+</style>
+
+<h2>Vinyl Listings</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Artist)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecordCo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Label)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CatNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Year)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Size)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                <img src="https://bowllystore.blob.core.windows.net/vinyl/Front/@Html.DisplayFor(modelItem => item.Front)" style='height:50px; width:50px ; object-fit: contain' />
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordCo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+
+                <a asp-action="Details" asp-route-id="@item.VinylId">Details</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

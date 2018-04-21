@@ -1,0 +1,128 @@
+﻿@model BowllyForever.Models.Track
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+
+<style 
+   type="text/css">
+       h2 {
+        color: #069;
+        }
+</style>
+
+<h2>Track Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+
+        </dt>
+        <dd>
+            <img src="https://bowllystore.blob.core.windows.net/shellac/@Html.DisplayFor(model => model.Label)/@Html.DisplayFor(model => model.Image)" style='height: 60%; width: 60%; object-fit: contain' />
+        </dd>
+        <dt>
+
+        </dt>
+        <dd>
+            <p>&nbsp;</p>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackId)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrackId
+        )
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Label)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CatNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CatNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Matrix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Matrix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Words)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Words)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Music)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Music)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mp3)
+        </dt>
+        <dd>
+         <a href="https://bowllystore.blob.core.windows.net/tracks/@Html.DisplayFor(model => model.Mp3)">@Html.DisplayFor(model => model.Mp3)<a/>
+        </dd>
+        <dt>
+
+        </dt>
+        <dd>
+            <p>&nbsp;</p>
+        </dd>
+        <dt>
+            YouTube
+        </dt>
+        <dd>
+            <iframe width="560" height="315" src="Https://youtube.com/embed/@Html.DisplayFor(model => model.Youtube)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TrackId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+

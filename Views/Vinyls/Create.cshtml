@@ -1,0 +1,91 @@
+﻿@model BowllyForever.Models.Vinyl
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Vinyl</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VinylId" class="control-label"></label>
+                <input asp-for="VinylId" class="form-control" />
+                <span asp-validation-for="VinylId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artist" class="control-label"></label>
+                <input asp-for="Artist" class="form-control" />
+                <span asp-validation-for="Artist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecordCo" class="control-label"></label>
+                <input asp-for="RecordCo" class="form-control" />
+                <span asp-validation-for="RecordCo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Label" class="control-label"></label>
+                <input asp-for="Label" class="form-control" />
+                <span asp-validation-for="Label" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CatNo" class="control-label"></label>
+                <input asp-for="CatNo" class="form-control" />
+                <span asp-validation-for="CatNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Size" class="control-label"></label>
+                <input asp-for="Size" class="form-control" />
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Front" class="control-label"></label>
+                <input asp-for="Front" class="form-control" />
+                <span asp-validation-for="Front" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Back" class="control-label"></label>
+                <input asp-for="Back" class="form-control" />
+                <span asp-validation-for="Back" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bowllyonvinyl" class="control-label"></label>
+                <input asp-for="Bowllyonvinyl" class="form-control" />
+                <span asp-validation-for="Bowllyonvinyl" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
